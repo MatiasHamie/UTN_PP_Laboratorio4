@@ -38,18 +38,32 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron mt-4">
     <div class="container">
-      <h4>Primer Parcial UTN-LAB4</h4>
-      <!-- <p class=" mt-4">Elija un formato de muestreo</p>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-secondary" (click)="onClick_ElegirFormato('tabla')">Tabla</button>
-        <button type="button" class="btn btn-secondary" (click)="onClick_ElegirFormato('grilla')">Grilla</button>
-      </div> -->
+      <h4 class="text-center">Primer Parcial UTN-LAB4</h4>
+
+      <app-actor-listado (actorOutput)="seEligioActor($event)"></app-actor-listado>
+      <p class=" mt-4">Click en una fila de actor para realizar una accion</p>
+      <div class="btn-group" role="group" *ngIf="actorElegidoPorUsuario">
+        <button type="button" class="btn btn-primary" (click)="accionARealizar('borrar')">Borrar</button>
+        <button type="button" class="btn btn-secondary" (click)="accionARealizar('mostrar')">Mostrar</button>
+        <button type="button" class="btn btn-info" (click)="accionARealizar('modificar')" >Modificar</button>
+      </div>
     </div>
   </div>
 
   <div class="container">
+    <div [ngSwitch]="accion">
+      <ng-template [ngSwitchCase]="'mostrar'">
+        <app-mostrar [actor]="actorElegidoPorUsuario"></app-mostrar>
+      </ng-template>
+      <ng-template [ngSwitchCase]="'borrar'">
+        <app-borrar [actor]="actorElegidoPorUsuario"></app-borrar>
+      </ng-template>
+      <ng-template [ngSwitchCase]="'modificar'">
+        <app-modificar [actor]="actorElegidoPorUsuario"></app-modificar>
+      </ng-template>
+    </div>
     <!-- <app-pelicula-listado [formato]="formato" (idParaBusqueda)="idRecibido($event)"></app-pelicula-listado> -->
-    <app-tabla-paises></app-tabla-paises>
+    <!-- <app-actor-listado></app-actor-listado> -->
     <hr>
   </div>
 

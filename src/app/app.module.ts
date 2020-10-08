@@ -22,6 +22,9 @@ import { BusquedaComponent } from './componentes/compartido/busqueda/busqueda.co
 import { PeliculaDetalleComponent } from './componentes/entidades/peliculas/pelicula-detalle/pelicula-detalle.component';
 import { TablaPaisesComponent } from './componentes/entidades/paises/tabla-paises/tabla-paises.component';
 import { FormsModule } from '@angular/forms';
+import { MostrarComponent } from './componentes/compartido/mostrar/mostrar.component';
+import { BorrarComponent } from './componentes/compartido/borrar/borrar.component';
+import { ModificarComponent } from './componentes/compartido/modificar/modificar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,10 @@ import { FormsModule } from '@angular/forms';
     GrillaPeliculaComponent,
     BusquedaComponent,
     PeliculaDetalleComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    MostrarComponent,
+    BorrarComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,

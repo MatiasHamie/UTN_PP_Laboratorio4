@@ -10,7 +10,4 @@ export class BienvenidoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  comenzar(){
-  }
 }

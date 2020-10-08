@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
 import { Pais } from 'src/app/clases/pais';
 import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
 
@@ -10,6 +11,8 @@ import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
 export class BusquedaComponent implements OnInit {
 
   paisesRetornadosDeLaApi: Pais[];
+  actorElegidoPorUsuario: Actor;
+  accion: string;
 
   // formato: string = '';
   // idABuscarDetalle: string = '';
@@ -18,6 +21,17 @@ export class BusquedaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  seEligioActor(actorElegido: Actor){
+    this.actorElegidoPorUsuario = actorElegido as Actor;
+    // console.log('actor elegido: ', this.actorElegidoPorUsuario);
+  }
+
+  accionARealizar(accionARealizar: string){
+    this.accion = accionARealizar;
+  }
+
+
 
 
   // onClick_ElegirFormato(formatoElegido: string){

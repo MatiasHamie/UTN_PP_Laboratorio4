@@ -13,22 +13,27 @@ export class FirestoreService {
 
   //Crear
   public crearUno(data: {nombre: string, url: string}) {
-    return this.firestore.collection('peliculas').add(data);
+    return this.firestore.collection('actores').add(data);
   }
 
   //Traer uno
   public traerUno(documentId: string) {
     console.log('Desde traerUno',documentId);
-    return this.firestore.collection('peliculas').doc(documentId).snapshotChanges();
+    return this.firestore.collection('actores').doc(documentId).snapshotChanges();
   }
 
   //Traer todo
   public traerTodo() {
-    return this.firestore.collection('peliculas').snapshotChanges();
+    return this.firestore.collection('actores').snapshotChanges();
   }
 
   //Actualizar
   public actualizar(documentId: string, data: any) {
-    return this.firestore.collection('peliculas').doc(documentId).set(data);
+    return this.firestore.collection('actores').doc(documentId).set(data);
+  }
+
+  //Actualizar
+  public borrar(documentId: string) {
+    return this.firestore.collection('actores').doc(documentId).delete();
   }
 }

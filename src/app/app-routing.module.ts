@@ -8,15 +8,21 @@ import { PeliculaAltaComponent } from './componentes/entidades/peliculas/pelicul
 import { PeliculaListadoComponent } from './componentes/entidades/peliculas/pelicula-listado/pelicula-listado.component';
 import { PeliculaDetalleComponent } from './componentes/entidades/peliculas/pelicula-detalle/pelicula-detalle.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { BorrarComponent } from './componentes/compartido/borrar/borrar.component';
+import { MostrarComponent } from './componentes/compartido/mostrar/mostrar.component';
+import { ModificarComponent } from './componentes/compartido/modificar/modificar.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'actor/alta', pathMatch: 'full'},
+  {path: '', redirectTo: 'busqueda', pathMatch: 'full'},
   {path: 'bienvenido', component: BienvenidoComponent},
   {path: 'peliculas/alta', component: PeliculaAltaComponent},
   {path: 'peliculas/listado', component: PeliculaListadoComponent},
   {path: 'peliculas/detalle', component: PeliculaDetalleComponent},
   {path: 'actor/alta', component: ActorAltaComponent},
   {path: 'actor/listado', component: ActorListadoComponent},
+  {path: 'mostrar', component: MostrarComponent},
+  {path: 'borrar', component: BorrarComponent},
+  {path: 'modificar', component: ModificarComponent},
   {path: 'busqueda', component: BusquedaComponent},
   {path: 'error', component: ErrorComponent},
   {path: '**', redirectTo: 'error', pathMatch: 'full'}
