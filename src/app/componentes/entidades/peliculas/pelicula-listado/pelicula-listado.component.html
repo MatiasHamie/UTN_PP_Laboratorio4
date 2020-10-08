@@ -1,0 +1,11 @@
+<div [ngSwitch]="formato">
+  <ng-template [ngSwitchCase]="'tabla'">
+    <app-tabla-pelicula [peliculas]="datosTraidos" (idAEmitir)="seleccionadaPelicula($event)"></app-tabla-pelicula>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'grilla'">
+    <app-grilla-pelicula [peliculas]="datosTraidos" (idAEmitir)="seleccionadaPelicula($event)"></app-grilla-pelicula>
+  </ng-template>
+</div>
+
+
+<app-pelicula-detalle [idDetalle]="idABuscarDetalle"></app-pelicula-detalle>

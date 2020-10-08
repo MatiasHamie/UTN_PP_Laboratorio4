@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Portada</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let pelicula of peliculas">
+    <tr style="justify-content: center;">
+      <td > <img [src]="pelicula.fotoPelicula" alt=""></td>
+      <td>{{ pelicula.nombre }}</td>
+      <td><button class="btn btn-info"  [routerLink]="'/peliculas/detalle'"  (click)="traerDetalle(pelicula.id)">Detalle</button></td>
+    </tr>
+  </tbody>
+</table>
