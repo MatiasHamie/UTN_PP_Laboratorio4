@@ -38,6 +38,6 @@ export class PeliculaListadoComponent implements OnInit {
 
   seleccionadaPelicula(id: string){
     this.idABuscarDetalle = id;
-    console.log('desde pelicula listado' ,this.idABuscarDetalle);
+    console.log('desde pelicula listado' ,id);
   }
 }

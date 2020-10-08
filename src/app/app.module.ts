@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 
+import { HttpClientModule } from "@angular/common/http";
+
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { PeliculaAltaComponent } from './componentes/entidades/peliculas/pelicula-alta/pelicula-alta.component';
@@ -18,7 +20,8 @@ import { TablaPeliculaComponent } from './componentes/compartido/tabla-pelicula/
 import { GrillaPeliculaComponent } from './componentes/compartido/grilla-pelicula/grilla-pelicula.component';
 import { BusquedaComponent } from './componentes/compartido/busqueda/busqueda.component';
 import { PeliculaDetalleComponent } from './componentes/entidades/peliculas/pelicula-detalle/pelicula-detalle.component';
-
+import { TablaPaisesComponent } from './componentes/entidades/paises/tabla-paises/tabla-paises.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +34,15 @@ import { PeliculaDetalleComponent } from './componentes/entidades/peliculas/peli
     TablaPeliculaComponent,
     GrillaPeliculaComponent,
     BusquedaComponent,
-    PeliculaDetalleComponent
+    PeliculaDetalleComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

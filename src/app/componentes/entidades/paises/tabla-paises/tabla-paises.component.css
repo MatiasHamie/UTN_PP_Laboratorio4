@@ -1,0 +1,12 @@
+img {
+  max-width: 50px;
+}
+.my-custom-scrollbar {
+  position: relative;
+  height: 50vh;
+  overflow: auto;
+  width: 25vw;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }

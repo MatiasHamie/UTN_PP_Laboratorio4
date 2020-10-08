@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pais } from 'src/app/clases/pais';
 import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
 
 @Component({
@@ -8,21 +9,24 @@ import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
 })
 export class BusquedaComponent implements OnInit {
 
-  formato: string = '';
-  idABuscarDetalle: string = '';
+  paisesRetornadosDeLaApi: Pais[];
+
+  // formato: string = '';
+  // idABuscarDetalle: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClick_ElegirFormato(formatoElegido: string){
-    this.formato = formatoElegido;
-  }
+
+  // onClick_ElegirFormato(formatoElegido: string){
+  //   this.formato = formatoElegido;
+  // }
 
 
-  idRecibido(id: string){
-    this.idABuscarDetalle = id;
-    // console.log('id desde busqueda', this.idABuscarDetalle);
-  }
+  // idRecibido(id: string){
+  //   this.idABuscarDetalle = id;
+  //   // console.log('id desde busqueda', this.idABuscarDetalle);
+  // }
 }

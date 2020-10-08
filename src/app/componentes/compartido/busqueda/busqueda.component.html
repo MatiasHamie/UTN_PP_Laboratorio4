@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
     aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</nav>
+</nav> -->
 
 <main role="main">
 
@@ -39,16 +39,17 @@
   <div class="jumbotron mt-4">
     <div class="container">
       <h4>Primer Parcial UTN-LAB4</h4>
-      <p class=" mt-4">Elija un formato de muestreo</p>
+      <!-- <p class=" mt-4">Elija un formato de muestreo</p>
       <div class="btn-group" role="group">
         <button type="button" class="btn btn-secondary" (click)="onClick_ElegirFormato('tabla')">Tabla</button>
         <button type="button" class="btn btn-secondary" (click)="onClick_ElegirFormato('grilla')">Grilla</button>
-      </div>
+      </div> -->
     </div>
   </div>
 
   <div class="container">
-    <app-pelicula-listado [formato]="formato" (idParaBusqueda)="idRecibido($event)"></app-pelicula-listado>
+    <!-- <app-pelicula-listado [formato]="formato" (idParaBusqueda)="idRecibido($event)"></app-pelicula-listado> -->
+    <app-tabla-paises></app-tabla-paises>
     <hr>
   </div>
 

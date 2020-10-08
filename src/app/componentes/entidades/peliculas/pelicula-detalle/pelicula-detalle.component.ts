@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
 
 @Component({
@@ -6,18 +6,23 @@ import { FirestoreService } from 'src/app/servicios/firebase/firestore.service';
   templateUrl: './pelicula-detalle.component.html',
   styleUrls: ['./pelicula-detalle.component.css']
 })
-export class PeliculaDetalleComponent implements OnInit {
+export class PeliculaDetalleComponent implements OnInit, OnChanges {
 
-  @Input() idDetalle: string;
+  @Input() aesede: string;
 
   constructor(private firestore: FirestoreService) { }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    this.buscarDetallePelicula()
+  }
 
   ngOnInit(): void {
     this.buscarDetallePelicula()
   }
 
   buscarDetallePelicula(){
-    console.log('desde detalle',this.idDetalle);
+    console.log('desde detalle',this.aesede);
     // this.firestore.traerUno(this.id).subscribe(snapshots => {
     //   console.log("Retorno -> ",snapshots)
     // });

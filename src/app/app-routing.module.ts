@@ -10,7 +10,7 @@ import { PeliculaDetalleComponent } from './componentes/entidades/peliculas/peli
 import { ErrorComponent } from './componentes/error/error.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'bienvenido', pathMatch: 'full'},
+  {path: '', redirectTo: 'actor/alta', pathMatch: 'full'},
   {path: 'bienvenido', component: BienvenidoComponent},
   {path: 'peliculas/alta', component: PeliculaAltaComponent},
   {path: 'peliculas/listado', component: PeliculaListadoComponent},
