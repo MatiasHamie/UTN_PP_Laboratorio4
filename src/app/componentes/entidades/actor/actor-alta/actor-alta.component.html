@@ -33,17 +33,25 @@
         <!-- id nombre apellido sexo fecha de nacimiento foto nacionalidad-->
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="sexo">Sexo</label>
-            <input type="text" class="form-control" id="sexo" placeholder="" value="" required autocomplete="off">
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
+            <form>
+              <select class="form-control form-control-sm" [(ngModel)]="sexoElegido"
+                [ngModelOptions]="{standalone: true}">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+              </select>
+            </form>
+            <!-- <label for="sexo">Sexo</label>
+              <input type="text" class="form-control" id="sexo" placeholder="" value="" required autocomplete="off">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div> -->
           </div>
           <div class="col-md-6 mb-3">
             <div class="form-group row">
               <label for="example-date-input" class="col-2 col-form-label">Fecha de nacimiento</label>
               <div class="col-10">
-                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" [(ngModel)]="fechaElegida" [ngModelOptions]="{standalone: true}">
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input"
+                  [(ngModel)]="fechaElegida" [ngModelOptions]="{standalone: true}">
               </div>
             </div>
             <!-- <label for="fecha">Fecha de nacimiento</label>
@@ -65,10 +73,8 @@
           <div class="col-md-6 mb-3">
             <label for="nacionalidad">Nacionalidad</label>
             <input type="text" class="form-control" id="nacionalidad" name="pais" placeholder="" value="" required
-              autocomplete="off"
-              readonly
-               [(ngModel)]="nombrePaisElegido">
-               <!-- [ngClass]="{'paisSeEligio': nombrePaisElegido}"> -->
+              autocomplete="off" readonly [(ngModel)]="nombrePaisElegido">
+            <!-- [ngClass]="{'paisSeEligio': nombrePaisElegido}"> -->
           </div>
         </div>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Continuar</button>

@@ -12,7 +12,13 @@ export class ActorAltaComponent implements OnInit, OnChanges {
   paisesRetornadosDeLaApi: Pais[];
   actorNuevo: Actor;
   nombrePaisElegido: string;
-  fechaElegida;
+
+  nombreElegido: string;
+  apellidoElegido: string;
+  sexoElegido: string;
+  fechaElegida: any;
+
+
 
   constructor(private paisesService: ServicioPaisesService) { }
   ngOnChanges(changes: SimpleChanges): void {
@@ -41,6 +47,6 @@ export class ActorAltaComponent implements OnInit, OnChanges {
   }
 
   altaActor(){
-
+    this.actorNuevo.fecha
   }
 }
