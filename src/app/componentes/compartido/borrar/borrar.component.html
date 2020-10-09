@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title">BORRAR {{ actor.nombre }}{{ actor.apellido }}</h5>
     <p class="card-text">Se borrara al actor elegido</p>
-    <a href="#" class="card-link">Continuar</a>
-    <a href="#" class="card-link">Cancelar</a>
+    <button class="btn btn-primary mx-2" (click)="continuarBorrando()">Continuar</button>
+    <button class="btn btn-primary" (click)="cancelar()">Cancelar</button>
   </div>
 </div>

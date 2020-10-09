@@ -19,11 +19,7 @@ export class ModificarComponent implements OnInit {
   constructor(private firestore: FirestoreService,private paisesService: ServicioPaisesService) { }
 
   ngOnInit(): void {
-    this.borrarActor();
-  }
 
-  borrarActor(){
-    // this.firestore.borrar(this.id);
   }
 
   continuarModificando(){
@@ -51,5 +47,9 @@ export class ModificarComponent implements OnInit {
 
   seEligioPais(nombrePais: string){
     this.nombrePaisElegido = nombrePais;
+  }
+
+  modificar(){
+    this.firestore.actualizar(this.actor.id,this.actor);
   }
 }
