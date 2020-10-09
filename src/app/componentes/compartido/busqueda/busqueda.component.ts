@@ -31,6 +31,10 @@ export class BusquedaComponent implements OnInit {
     this.accion = accionARealizar;
   }
 
+  cancelar(){
+    this.accion = '';
+  }
+
 
 
 

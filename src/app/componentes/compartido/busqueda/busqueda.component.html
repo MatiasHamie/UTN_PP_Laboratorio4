@@ -40,6 +40,9 @@
     <div class="container">
       <h4 class="text-center">Primer Parcial UTN-LAB4</h4>
 
+      <button type="button" class="btn btn-warning mb-4" (click)="accionARealizar('altaActor')">Ir a ALTA ACTOR</button>
+
+
       <app-actor-listado (actorOutput)="seEligioActor($event)"></app-actor-listado>
       <p class=" mt-4">Click en una fila de actor para realizar una accion</p>
       <div class="btn-group" role="group" *ngIf="actorElegidoPorUsuario">
@@ -60,6 +63,10 @@
       </ng-template>
       <ng-template [ngSwitchCase]="'modificar'">
         <app-modificar [actor]="actorElegidoPorUsuario"></app-modificar>
+      </ng-template>
+      <ng-template [ngSwitchCase]="'altaActor'">
+        <button type="button" class="btn btn-danger mb-4" (click)="cancelar()">Cancelar</button>
+        <app-actor-alta></app-actor-alta>
       </ng-template>
     </div>
     <!-- <app-pelicula-listado [formato]="formato" (idParaBusqueda)="idRecibido($event)"></app-pelicula-listado> -->

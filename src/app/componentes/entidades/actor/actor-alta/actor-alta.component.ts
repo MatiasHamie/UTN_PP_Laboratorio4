@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
 import { Pais } from 'src/app/clases/pais';
 import { ServicioPaisesService } from "../../../../servicios/servicio-paises.service";
 
@@ -9,8 +10,9 @@ import { ServicioPaisesService } from "../../../../servicios/servicio-paises.ser
 })
 export class ActorAltaComponent implements OnInit, OnChanges {
   paisesRetornadosDeLaApi: Pais[];
-
+  actorNuevo: Actor;
   nombrePaisElegido: string;
+  fechaElegida;
 
   constructor(private paisesService: ServicioPaisesService) { }
   ngOnChanges(changes: SimpleChanges): void {
@@ -36,5 +38,9 @@ export class ActorAltaComponent implements OnInit, OnChanges {
   }
   seEligioPais(nombrePais: string){
     this.nombrePaisElegido = nombrePais;
+  }
+
+  altaActor(){
+
   }
 }
